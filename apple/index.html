@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/d3d6f2df1f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+
+   
+    <title>Instagram</title>
+    <link rel="icon" type="image/x-icon" href="data:image/jpeg;base64,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">
+    
+</head>
+
+<body>
+
+    <div class="navigation">
+        <div class="logo">
+          <a class="no-underline" href="#">
+            <img src="/images/ig-logo.png" alt="">
+          </a>
+        </div>
+        <div class="navigation-search-container">
+          <i class="fa fa-search"></i>
+          <input class="search-field" type="text" placeholder="Search">
+          <div class="search-container">
+            <div class="search-container-box">
+              <div class="search-results">
+      
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="navigation-icons">
+          <a href="https://www.instagram.com/jomatt___m_j/" target ="_blank" class="navigation-link" style="margin: 5px;">
+            <svg aria-label="Home" class="_ab6-" color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M22 23h-6.001a1 1 0 01-1-1v-5.455a2.997 2.997 0 10-5.993 0V22a1 1 0 01-1 1H2a1 1 0 01-1-1V11.543a1.002 1.002 0 01.31-.724l10-9.543a1.001 1.001 0 011.38 0l10 9.543a1.002 1.002 0 01.31.724V22a1 1 0 01-1 1z"></path></svg>
+          </a>
+          <a class="navigation-link notifica" style="margin: 5px;">
+            <svg aria-label="Direct" class="_ab6-" color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><line fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2" x1="22" x2="9.218" y1="3" y2="10.083"></line><polygon fill="none" points="11.698 20.334 22 3.001 2 3.001 9.218 10.084 11.698 20.334" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></polygon></svg>
+          </a>
+          <a href="https://www.instagram.com/jomatt___m_j" class="navigation-link" style="margin: 5px;">
+            <svg aria-label="New post" class="_ab6-" color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M2 12v3.45c0 2.849.698 4.005 1.606 4.944.94.909 2.098 1.608 4.946 1.608h6.896c2.848 0 4.006-.7 4.946-1.608C21.302 19.455 22 18.3 22 15.45V8.552c0-2.849-.698-4.006-1.606-4.945C19.454 2.7 18.296 2 15.448 2H8.552c-2.848 0-4.006.699-4.946 1.607C2.698 4.547 2 5.703 2 8.552z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="6.545" x2="17.455" y1="12.001" y2="12.001"></line><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="12.003" x2="12.003" y1="6.545" y2="17.455"></line></svg>
+          </a>
+          <a href="https://www.instagram.com/jomatt___m_j" id="signout" class="navigation-link" style="margin: 5px;">
+            <svg aria-label="Find people" class="_ab6-" color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M13.173 13.164l1.491-3.829-3.83 1.49zM12.001.5a11.5 11.5 0 1011.5 11.5A11.513 11.513 0 0012.001.5zm5.35 7.443l-2.478 6.369a1 1 0 01-.57.569l-6.36 2.47a1 1 0 01-1.294-1.294l2.48-6.369a1 1 0 01.57-.569l6.359-2.47a1 1 0 011.294 1.294z"></path></svg>
+          </a>
+          <a href="https://www.instagram.com/jomatt___m_j" id="signout" class="navigation-link" style="margin: 5px;">
+            <svg aria-label="Activity Feed" class="_ab6-" color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M16.792 3.904A4.989 4.989 0 0121.5 9.122c0 3.072-2.652 4.959-5.197 7.222-2.512 2.243-3.865 3.469-4.303 3.752-.477-.309-2.143-1.823-4.303-3.752C5.141 14.072 2.5 12.167 2.5 9.122a4.989 4.989 0 014.708-5.218 4.21 4.21 0 013.675 1.941c.84 1.175.98 1.763 1.12 1.763s.278-.588 1.11-1.766a4.17 4.17 0 013.679-1.938m0-2a6.04 6.04 0 00-4.797 2.127 6.052 6.052 0 00-4.787-2.127A6.985 6.985 0 00.5 9.122c0 3.61 2.55 5.827 5.015 7.97.283.246.569.494.853.747l1.027.918a44.998 44.998 0 003.518 3.018 2 2 0 002.174 0 45.263 45.263 0 003.626-3.115l.922-.824c.293-.26.59-.519.885-.774 2.334-2.025 4.98-4.32 4.98-7.94a6.985 6.985 0 00-6.708-7.218z"></path></svg>
+          </a>
+        </div>
+      </div>
+      
+      
+      
+    <div class="mt-4">
+        <div class="container d-flex justify-content-center">
+            <div class="col-11">
+                <div class="row">
+                    <div class="col-">
+                        <div class="card">
+                            <div class="card-body d-flex justify-content-start">
+                                <ul class="list-unstyled mb-0">
+                                    <li class="list-inline-item">
+                                        <button class="btn p-0 m-0">
+                                            <div class="d-flex flex-column align-items-center">
+                                                <div
+                                                    class="rounded-circle overflow-hidden d-flex justify-content-center align-items-center border border-danger story-profile-photo">
+                                                    <img src="/images/Screenshot 2022-09-09 at 2.38.08 AM.png" alt="..."
+                                                        style="transform: scale(1.5); width: 100%; position: absolute; left: 0;">
+                                                </div>
+                                                <small>jee___</small>
+                                            </div>
+                                        </button>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <button class="btn p-0 m-0">
+                                            <div class="d-flex flex-column align-items-center">
+                                                <div
+                                                    class="rounded-circle overflow-hidden d-flex justify-content-center align-items-center border border-danger story-profile-photo">
+                                                    <img src="/images/Screenshot 2022-09-09 at 2.40.58 AM.png" alt="..."
+                                                        style="transform: scale(1.5); width: 100%; position: absolute; left: 0;">
+                                                </div>
+                                                <small>ajeesh__aj</small>
+                                            </div>
+                                        </button>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <button class="btn p-0 m-0">
+                                            <div class="d-flex flex-column align-items-center">
+                                                <div
+                                                    class="rounded-circle overflow-hidden d-flex justify-content-center align-items-center border border-danger story-profile-photo">
+                                                    <img src="/images/Screenshot 2022-09-09 at 2.49.48 AM.png" alt="..."
+                                                        style="transform: scale(1.5); width: 100%; position: absolute; left: 0;">
+                                                </div>
+                                                <small>jomon__ab...</small>
+                                            </div>
+                                        </button>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <button class="btn p-0 m-0">
+                                            <div class="d-flex flex-column align-items-center">
+                                                <div
+                                                    class="rounded-circle overflow-hidden d-flex justify-content-center align-items-center border border-danger story-profile-photo">
+                                                    <img src="/images/Screenshot 2022-09-09 at 2.54.33 AM.png" alt="..."
+                                                        style="transform: scale(1.5); width: 100%; position: absolute; left: 0;">
+                                                </div>
+                                                <small>ebi...</small>
+                                            </div>
+                                        </button>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <button class="btn p-0 m-0">
+                                            <div class="d-flex flex-column align-items-center">
+                                                <div
+                                                    class="rounded-circle overflow-hidden d-flex justify-content-center align-items-center border border-danger story-profile-photo">
+                                                    <img src="/images/Screenshot 2022-09-09 at 2.56.37 AM.png" alt="..."
+                                                        style="transform: scale(1.5); width: 100%; position: absolute; left: 0;">
+                                                </div>
+                                                <small>broto..</small>
+                                            </div>
+                                        </button>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <button class="btn p-0 m-0">
+                                            <div class="d-flex flex-column align-items-center">
+                                                <div
+                                                    class="rounded-circle overflow-hidden d-flex justify-content-center align-items-center border border-danger story-profile-photo">
+                                                    <img src="/images/Screenshot 2022-09-09 at 3.08.15 AM.png" alt="..."
+                                                        style="transform: scale(1.5); width: 100%; position: absolute; left: 0;">
+                                                </div>
+                                                <small>eagle..</small>
+                                            </div>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column mt-4 mb-4">
+
+                            <div class="card">
+                                <div class="card-header p-3">
+                                    <div class="d-flex flex-row align-items-center">
+                                        <div
+                                            class="rounded-circle overflow-hidden d-flex justify-content-center align-items-center border border-danger post-profile-photo mr-3">
+                                            <img src="images/Screenshot 2022-09-09 at 2.56.37 AM.png" alt="..."
+                                                style="transform: scale(1.5); width: 100%; position: absolute; left: 0;">
+                                        </div>
+                                        <span class="font-weight-bold">brototype.malayalam</span>
+                                    </div>
+                                </div>
+                                <div class="card-body p-0">
+                                    <div class="embed-responsive embed-responsive-1by1">
+                                        <img class="embed-responsive-item" src="/images/Screenshot 2022-09-09 at 3.28.13 AM.png" />
+                                    </div>
+
+                                    <div class="d-flex flex-row justify-content-between pl-3 pr-3 pt-3 pb-1">
+                                        <ul class="list-inline d-flex flex-row align-items-center m-0">
+                                            <li class="list-inline-item">
+                                                <button class="btn p-0">
+                                                    <svg width="1.6em" height="1.6em" viewBox="0 0 16 16"
+                                                        class="bi bi-heart" fill="currentColor"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd"
+                                                            d="M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+                                                    </svg>
+                                                </button>
+                                            </li>
+                                            <li class="list-inline-item ml-2">
+                                                <button class="btn p-0">
+                                                    <svg width="1.6em" height="1.6em" viewBox="0 0 16 16"
+                                                        class="bi bi-chat" fill="currentColor"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd"
+                                                            d="M2.678 11.894a1 1 0 0 1 .287.801 10.97 10.97 0 0 1-.398 2c1.395-.323 2.247-.697 2.634-.893a1 1 0 0 1 .71-.074A8.06 8.06 0 0 0 8 14c3.996 0 7-2.807 7-6 0-3.192-3.004-6-7-6S1 4.808 1 8c0 1.468.617 2.83 1.678 3.894zm-.493 3.905a21.682 21.682 0 0 1-.713.129c-.2.032-.352-.176-.273-.362a9.68 9.68 0 0 0 .244-.637l.003-.01c.248-.72.45-1.548.524-2.319C.743 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.52.263-1.639.742-3.468 1.105z" />
+                                                    </svg>
+                                                </button>
+                                            </li>
+                                            <li class="list-inline-item ml-2">
+                                                <button class="btn p-0">
+                                                    <svg width="1.6em" height="1.6em" viewBox="0 0 16 16"
+                                                        class="bi bi-share" fill="currentColor"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd"
+                                                            d="M11.724 3.947l-7 3.5-.448-.894 7-3.5.448.894zm-.448 9l-7-3.5.448-.894 7 3.5-.448.894z" />
+                                                        <path fill-rule="evenodd"
+                                                            d="M13.5 4a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zm0 10a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zm-11-6.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
+                                                    </svg>
+                                                </button>
+                                            </li>
+                                        </ul>
+                                        <div>
+                                            <button class="btn p-0">
+                                                <svg aria-label="Save" class="_ab6-" color="#8e8e8e" fill="#8e8e8e" height="24" role="img" viewBox="0 0 24 24" width="24"><polygon fill="none" points="20 21 12 13.44 4 21 4 3 20 3 20 21" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polygon></svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="pl-3 pr-3 pb-2">
+                                        <strong class="d-block">365.354 likes</strong>
+                                        <strong class="d-block">brototype.malayalam</strong>
+                                        <p class="d-block mb-1">Hope this ONAM brings Good Fortune and Happiness for you with it!</p>
+                                        <button class="btn p-0">
+                                            <span class="text-muted">View all 2,247 comments</span>
+                                        </button>
+
+                                        <div>
+                                            <div>
+                                                <strong class="d-block">ajeesh__aj</strong>
+                                                <span>❤️💓💓💓💓💓</span>
+                                            </div>
+                                            <div>
+                                                <strong class="d-block">vishnu_k</strong>
+                                                <span>Hi</span>
+                                            </div>
+                                        </div>
+
+                                        <small class="text-muted">4 HOURS AGO</small>
+                                    </div>
+
+                                    <div class="position-relative comment-box">
+                                        <form>
+                                            <input class="w-100 border-0 p-3 input-post" placeholder="Add a comment...">
+                                            <button class="btn btn-primary position-absolute btn-ig">Post</button>
+                                        </form>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                        </div>
+                       <div class="d-flex flex-column mt-4 mb-4">
+
+                            <div class="card">
+                                <div class="card-header p-3">
+                                    <div class="d-flex flex-row align-items-center">
+                                        <div
+                                            class="rounded-circle overflow-hidden d-flex justify-content-center align-items-center border border-danger post-profile-photo mr-3">
+                                            <img src="images/Screenshot 2022-09-09 at 9.09.07 AM.png" alt="..."
+                                                style="transform: scale(1.5); width: 100%; position: absolute; left: 0;">
+                                        </div>
+                                        <span class="font-weight-bold">abinbabsabraham</span>
+                                    </div>
+                                </div>
+                                <div class="card-body p-0">
+                                    <div class="embed-responsive embed-responsive-1by1">
+                                        <img class="embed-responsive-item" src="/images/Screenshot 2022-09-09 at 9.08.11 AM.png" />
+                                    </div>
+
+                                    <div class="d-flex flex-row justify-content-between pl-3 pr-3 pt-3 pb-1">
+                                        <ul class="list-inline d-flex flex-row align-items-center m-0">
+                                            <li class="list-inline-item">
+                                                <button class="btn p-0">
+                                                    <svg width="1.6em" height="1.6em" viewBox="0 0 16 16"
+                                                        class="bi bi-heart" fill="currentColor"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd"
+                                                            d="M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+                                                    </svg>
+                                                </button>
+                                            </li>
+                                            <li class="list-inline-item ml-2">
+                                                <button class="btn p-0">
+                                                    <svg width="1.6em" height="1.6em" viewBox="0 0 16 16"
+                                                        class="bi bi-chat" fill="currentColor"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd"
+                                                            d="M2.678 11.894a1 1 0 0 1 .287.801 10.97 10.97 0 0 1-.398 2c1.395-.323 2.247-.697 2.634-.893a1 1 0 0 1 .71-.074A8.06 8.06 0 0 0 8 14c3.996 0 7-2.807 7-6 0-3.192-3.004-6-7-6S1 4.808 1 8c0 1.468.617 2.83 1.678 3.894zm-.493 3.905a21.682 21.682 0 0 1-.713.129c-.2.032-.352-.176-.273-.362a9.68 9.68 0 0 0 .244-.637l.003-.01c.248-.72.45-1.548.524-2.319C.743 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.52.263-1.639.742-3.468 1.105z" />
+                                                    </svg>
+                                                </button>
+                                            </li>
+                                            <li class="list-inline-item ml-2">
+                                                <button class="btn p-0">
+                                                    <svg width="1.6em" height="1.6em" viewBox="0 0 16 16"
+                                                        class="bi bi-share" fill="currentColor"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd"
+                                                            d="M11.724 3.947l-7 3.5-.448-.894 7-3.5.448.894zm-.448 9l-7-3.5.448-.894 7 3.5-.448.894z" />
+                                                        <path fill-rule="evenodd"
+                                                            d="M13.5 4a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zm0 10a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zm-11-6.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
+                                                    </svg>
+                                                </button>
+                                            </li>
+                                        </ul>
+                                        <div>
+                                            <button class="btn p-0">
+                                                <svg aria-label="Save" class="_ab6-" color="#8e8e8e" fill="#8e8e8e" height="24" role="img" viewBox="0 0 24 24" width="24"><polygon fill="none" points="20 21 12 13.44 4 21 4 3 20 3 20 21" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polygon></svg>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="pl-3 pr-3 pb-2">
+                                        <strong class="d-block">678.567 likes</strong>
+                                        <strong class="d-block">abinbabsabraham</strong>
+                                        <p class="d-block mb-1">#babsgurka</p>
+                                        <button class="btn p-0">
+                                            <span class="text-muted">View all 4,847 comments</span>
+                                        </button>
+
+                                        <div>
+                                            <div>
+                                                <strong class="d-block">alan__p</strong>
+                                                <span>❤️💓💓💓💓💓</span>
+                                            </div>
+                                            <div>
+                                                <strong class="d-block">aman__therider</strong>
+                                                <span>Hi</span>
+                                            </div>
+                                        </div>
+
+                                        <small class="text-muted">1 HOURS AGO</small>
+                                    </div>
+
+                                    <div class="position-relative comment-box">
+                                        <form>
+                                            <input class="w-100 border-0 p-3 input-post" placeholder="Add a comment...">
+                                            <button class="btn btn-primary position-absolute btn-ig">Post</button>
+                                        </form>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                        </div>
+                        
+                    </div>
+                    <div class="rgd">
+                    <div class="col-0">
+                        <div class="d-flex flex-row align-items-center">
+                            <div
+                                class="rounded-circle overflow-hidden d-flex justify-content-center align-items-center border sidenav-profile-photo">
+                                <img src="images/Screenshot_20220902-170631_Fotor.png" alt="..."
+                                    style="transform: scale(1.5); width: 100%; position: absolute; left: 0;">
+                            </div>
+                            <div class="profile-info ml-3">
+                                <span class="profile-info-username">jomatt__mj</span>
+                                <span class="profile-info-name">Jomatt M J</span>
+                            </div>
+                        </div>
+
+                        <div class="mt-4">
+                            <div class="d-flex flex-row justify-content-between">
+                                <small class="text-muted font-weight-normal">Suggestions For You</small>
+                                <small>See All</small>
+                            </div>
+                            <div>
+                                <div class="d-flex flex-row justify-content-between align-items-center mt-3 mb-3">
+                                    <div class="d-flex flex-row align-items-center">
+                                        <div
+                                            class="rounded-circle overflow-hidden d-flex justify-content-center align-items-center border sugest-profile-photo">
+                                            <img src="/images/Screenshot 2022-09-09 at 4.17.15 AM.png" alt="..."
+                                                style="transform: scale(1.5); width: 100%; position: absolute; left: 0;">
+                                        </div>
+                                        <strong class="ml-3 sugest-username">therealprithvi</strong>
+                                    </div>
+                                    <button class="btn btn-primary btn-sm p-0 btn-ig ">Follow</button>
+                                </div>
+                                <div class="d-flex flex-row justify-content-between align-items-center mt-3 mb-3">
+                                    <div class="d-flex flex-row align-items-center">
+                                        <div
+                                            class="rounded-circle overflow-hidden d-flex justify-content-center align-items-center border sugest-profile-photo">
+                                            <img src="/images/Screenshot 2022-09-09 at 4.22.34 AM.png" alt="..."
+                                                style="transform: scale(1.5); width: 100%; position: absolute; left: 0;">
+                                        </div>
+                                        <strong class="ml-3 sugest-username">tovinothomas</strong>
+                                    </div>
+                                    <button class="btn btn-primary btn-sm p-0 btn-ig ">Follow</button>
+                                </div>
+                                <div class="d-flex flex-row justify-content-between align-items-center mt-3 mb-3">
+                                    <div class="d-flex flex-row align-items-center">
+                                        <div
+                                            class="rounded-circle overflow-hidden d-flex justify-content-center align-items-center border sugest-profile-photo">
+                                            <img src="/images/Screenshot 2022-09-09 at 4.26.57 AM.png" alt="..."
+                                                style="transform: scale(1.5); width: 100%; position: absolute; left: 0;">
+                                        </div>
+                                        <strong class="ml-3 sugest-username">therock</strong>
+                                    </div>
+                                    <button class="btn btn-primary btn-sm p-0 btn-ig">Follow</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+</body>
+
+<footer>
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</footer>
+
+</html>
